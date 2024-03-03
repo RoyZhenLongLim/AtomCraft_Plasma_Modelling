@@ -310,3 +310,5 @@ axis = eq.plot(show=False)
 eq.tokamak.plot(axis=axis, show=False)
 constrain.plot(axis=axis, show=True)
 
+
+#%%

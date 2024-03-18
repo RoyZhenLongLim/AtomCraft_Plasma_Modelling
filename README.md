@@ -24,7 +24,8 @@ To be more specific:
 
 During plasma breakdown, it is essentially to minimise the loss rate.
 
-Loss rate = velocity parallel to field / L  
+Loss rate = velocity parallel to field / L 
+
 L = connection length 
 
 L ~ 1/4 * a_eff *  B_phi * R_null / B_z
@@ -38,6 +39,8 @@ The goal is to:
 - Minimize B_z 
 - Maximize a_null
 
+The goal is to ensure that the connection length is far greater than the ionization length (ionization length appears to
+be an empirical-derived parameter) (see Electromagnetic Models of Plasma Breakdown in the JET Tokamak)
 
 ## Relevant Literature
 Literature that I think are important
@@ -45,13 +48,32 @@ Literature that I think are important
 - [Designing a tokamak fusion reactor—How does plasma physics fit in?](https://dspace.mit.edu/bitstream/handle/1721.1/111207/Designing%20a%20tokamak.pdf?sequence=1)
   - Good introduction to plasma physics and how they influence design decisions in tokamak
 
+### Plasma Burn-Through
+- [The physics of tokamak start-up](https://nstx.pppl.gov/nstxhome/DragNDrop/Publications_Presentations/Publications/2013%20Papers/Mueller_PoP.pdf)
+  - Good overview of the physics of the different phases in start up
+- [Plasma burn-through simulations using the DYON code and predictions for ITER](https://arxiv.org/pdf/1403.0380.pdf)
+  - Discuss how simulations for full ionization process required to generate higher T plasma
+- [Criterion for Plasma Burn-Through in Tokamaks](http://golem.fjfi.cvut.cz/wiki/Experiments/BreakDownStudies/library/EFDP12016.pdf)
+  - Explore how DYON code is used to model plasma burn-through
 - [Experimental results with an optimized magnetic field configuration for JET breakdown](https://iopscience.iop.org/article/10.1088/0029-5515/52/12/123010)
   - Explores modelling connection length during Plasma Break-down
   - Compares theoretical simulation to experimental values
   - [Electromagnetic Models of Plasma Breakdown in the JET Tokamak](https://www.researchgate.net/publication/260525826_Electromagnetic_Models_of_Plasma_Breakdown_in_the_JET_Tokamak)
-    - Goes through how the code was written in order to model null configurations
-    - Doesn't give the code for this tho
+    - Goes through how the code was written in order to model null configurations (no code provided)
+    - Goes ionization length and connection length / what is required in order
+  - [Enhancement of plasma burn-through simulation and validation in JET](https://iopscience.iop.org/article/10.1088/0029-5515/52/10/103016/meta)
+- [Runaway electron generation during tokamak start-up](https://arxiv.org/pdf/2203.09900.pdf)
+  - Modelling Plasma Burn-through in ITER, specifically on the effects of runaway electrons
 
+### Plasma
+- [Plasma Magnetic Control](https://github.com/AdrianoMele/PlasmaMagneticControl)
+  - Include Matlab Code for plasma control based off of CREATE-L/NL
+  - [Create-L Plasma response model](https://iopscience.iop.org/article/10.1088/0029-5515/38/5/307/pdf))
+    - Paper for understanding the underlying assumptions made in modelling
+- [Chapter 8: Plasma operation and control](https://people.physics.anu.edu.au/~bdb112/ITER_Physics_2007/nf7_6_S08.pdf)
+  - How ITER plasma control works
+- [Magnetic Control of Tokamak](https://link.springer.com/book/10.1007/978-3-319-29890-0)
+  - Goes through how control and diagnostics for multiple different stages of tokamak operations
 
 ### Tokamaks to reference
 Small Tokamaks
@@ -63,13 +85,8 @@ Large Tokamak
 
 ### Other Literature
 Literature that I don't think is important by might be useful down the track
-
-- [Magnetic Control of Tokamak](https://link.springer.com/book/10.1007/978-3-319-29890-0)
-  - Goes through how control and diagnostics for multiple different stages of tokamak operations
 - [Bout++](https://bout-dev.readthedocs.io/en/latest/user_docs/introduction.html)
   - C++ Framework for plasma fluid simulations in 3D curvilinear coordinates
   - [Modelling of magnetic null points using BOUT++](https://etheses.whiterose.ac.uk/15359/1/BShanahan_thesis_final_definitely.pdf)
-- [Plasma Magnetic Control](https://github.com/AdrianoMele/PlasmaMagneticControl)
-  - Include Matlab Code for plasma control based off of CREATE-L/NL
-  - [Create-L Plasma response model](https://iopscience.iop.org/article/10.1088/0029-5515/38/5/307/pdf))
-    - Paper for understanding the underlying assumptions made in modelling
+- [Development of a free boundary Tokamak Equilibrium Solver (TES) for Advanced Study of Tokamak Equilibria](https://arxiv.org/pdf/1503.03135.pdf)
+  - [KSTAR_tokamak_simulator](https://github.com/jaem-seo/KSTAR_tokamak_simulator/tree/main)

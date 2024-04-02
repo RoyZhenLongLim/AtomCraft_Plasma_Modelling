@@ -327,7 +327,6 @@ class MirroredCircuit(Circuit):
         self.update_coil_positions()
 
     def update_coil_positions(self):
-        print(f"Updating coil R:{self._R:.2f} Z:{self._Z:.2f}")
         for _, coil, _ in self.coils:
             coil.R = self._R
             coil.Z = self._Z

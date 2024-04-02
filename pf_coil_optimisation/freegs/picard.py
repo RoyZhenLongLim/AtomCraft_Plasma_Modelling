@@ -37,8 +37,8 @@ def solve(
     psi_bndry=None,
     maxits=50,
     convergenceInfo=False,
-    check_limited=False,
-    wait_for_limited=False,
+    check_limited=True,
+    wait_for_limited=True,
     limit_it=0,
 ):
     """

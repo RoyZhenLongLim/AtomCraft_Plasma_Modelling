@@ -115,7 +115,6 @@ def optimise(obj, controls, measure, maxgen=10, N=10, CR=0.3, F=1.0, monitor=Non
     assert N >= 4
 
     best = (measure(obj), obj)  # Highest score, candidate solution (agent)
-    print(obj)
     population = [best]  # List of (score, agent)
 
     for i in range(N - 1):

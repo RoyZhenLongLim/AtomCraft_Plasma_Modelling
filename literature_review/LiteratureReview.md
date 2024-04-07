@@ -73,7 +73,7 @@ Literature that I think are important
 ### Plasma
 - [Plasma Magnetic Control](https://github.com/AdrianoMele/PlasmaMagneticControl)
     - Include Matlab Code for plasma control based off of CREATE-L/NL
-    - [Create-L Plasma response model](https://iopscience.iop.org/article/10.1088/0029-5515/38/5/307/pdf))
+    - [Create-L Plasma response model](https://iopscience.iop.org/article/10.1088/0029-5515/38/5/307/pdf)
         - Paper for understanding the underlying assumptions made in modelling
 - [Chapter 8: Plasma operation and control](https://people.physics.anu.edu.au/~bdb112/ITER_Physics_2007/nf7_6_S08.pdf)
     - How ITER plasma control works

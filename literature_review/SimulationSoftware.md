@@ -2,8 +2,40 @@
 
 This file is dedicated to provide a general overview into how tokamaks are simulated at different stages of operation
 ## Motivation
-To model a tokamak, we need the following code:
-- 
+Modelling a tokamak means we need modelling for the following stages:
+- Plasma Burn-through Simulation
+  - Model plasma burn-through discharge via Ohmic Heating 
+  - Aim of simulation:
+    - Verify our prediction of threshold prefill gas pressure required 
+    - Measure the effects of ECRH-assisted plasma burn-through 
+    - Investigate the effect of impurities and eddy current in passive structures on simulation results
+    - Investigate how PF coils can be used to increase connection length
+- Fixed Boundary Plasma Simulation
+  - Models plasma when the shape of the plasma is fixed/static during the simulation
+  - Aim of simulation:
+    - Assess the stability of plasma equilibrium
+    - Determine how plasma stability can be improved 
+- Free Boundary Plasma Simulation
+  - Models plasma equilibrium with the shape of plasma as an output of simulation
+  - Aim of simulation:
+    - Determine the shape of the plasma giving various changing factors (e.g. change in plasma pressure) to optimise
+      for stability
+    - Helps explore how disruptions make affect the plasmas shape 
+    - Determine what various sensors should detect given a specific equilibrium state
+- Transport Code 
+  - Transport code is a general term for any type of transfer that occurs in a tokamak. These include but are not
+    limited to:
+    - Particle Transport 
+    - Energy Transport
+
+In general, simulating a tokamak is necessary for:
+- simulating evolution of plasma from plasma formation (heating and current drive), plasma current ramp up, plasma
+  equilibrium and confining plasma (i.e. plasma stability)
+- determine how current in coils interact with each other as tokamak starts up
+- testing control system responses
+- evaluate safety
+  - max voltage induced within coils
+  - heating of the vacuum vessel due to radio waves or plasma
 
 ## General Purpose
 - [PROCESS](https://ccfe.ukaea.uk/wp-content/uploads/2019/11/A-User-Guide-to-the-PROCESS-systems-code.pdf)

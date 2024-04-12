@@ -44,21 +44,32 @@ In general, simulating a tokamak is necessary for:
   - For modelling fusion power plants 
 - [BOUT++](https://bout-dev.readthedocs.io/en/latest/)
   - General Purpose Plasma Simulations
-  - **Source**: https://boutproject.github.io/ 
+  - **Source**: https://boutproject.github.io/
+- [METIS](https://fusenet.eu/metis-plasma-simulator)
+- Tokamak Plasma simulation based off of CRONOS Integrated Modelling Suite for transport simulations
+- **Source**: Obtained by asking permission with authors(s) of METIS
+- [CRONOS](https://iopscience.iop.org/article/10.1088/0029-5515/50/4/043001)
+  - Suite of numerical codes for predictive/interpretive simulation of a full tokamak discharge
+  - [CRONOS Modules](http://www-fusion-magnetique.cea.fr/cronos/gp/cronos_gb.pdf)
+  - **Source**: Not 100% sure but seems like we can ask for it
+  - 
+- [OMFit](https://www.osti.gov/servlets/purl/1411210)
+  - One Modelling Framework for Integrated Task
+  - Contains a large variety of modelling tools for tokamak design and manufacturing
+  - Seems very promising tho I am not sure whether we can customise it to our tokamak since it seems to only be used for
+    modelling large, research tokamaks
+  - **Source**: https://omfit.io/publications.html
 
 ## Tokamak Equilibrium
 - [FreeGS](https://freegs.readthedocs.io/en/latest/)
   - Free Boundary Grad-Shafranov Solver
   - **Source**: https://github.com/freegs-plasma/freegs
+- [Fiesta](https://arxiv.org/abs/1310.8450)
+  - Free Boundary Grad-Shafranov Solver
+  - **Source**: Not publicly available (can ask author for it)
 
-## Tokamak Start-Up 
-- [METIS](https://fusenet.eu/metis-plasma-simulator)
-  - Tokamak Plasma simulation based off of CRONOS Integrated Modelling Suite for transport simulations
-  - **Source**: Obtained by asking permission with authors(s) of METIS
-- [CRONOS](https://iopscience.iop.org/article/10.1088/0029-5515/50/4/043001)
-  - Suite of numerical codes for predictive/interpretive simulation of a full tokamak discharge
-  - [CRONOS Modules](http://www-fusion-magnetique.cea.fr/cronos/gp/cronos_gb.pdf)
-  - **Source**: Not 100% sure but seems like we can ask for it 
+
+## Tokamak Start-Up
 - [Verificatation and validation of plasma burn-through simulations in preparation for ITER First Plasma](https://conferences.iaea.org/event/214/contributions/17228/attachments/9791/15307/poster_695.pdf)
   - [DYON](https://arxiv.org/pdf/1403.0380.pdf)
     - Plasma Burn-through Solver developed at Joint European Torus (JET)

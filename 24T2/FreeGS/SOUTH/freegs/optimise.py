@@ -30,6 +30,7 @@ from freegs.plotting import plotEquilibrium
 
 from numpy import sqrt, inf
 
+
 # Measures which operate on Equilibrium objects
 
 
@@ -193,15 +194,15 @@ def optimise(eq, controls, measure, maxgen=10, N=10, CR=0.3, F=1.0, monitor=None
     def solve_and_measure(eq):
         # Need to update some internal caches
         import freegs
-        # eq._pgreen = eq.tokamak.createPsiGreens(eq.R, eq.Z)
+        eq._pgreen = eq.tokamak.createPsiGreens(eq.R, eq.Z)
         try:
             # Re-solve
             profiles = freegs.jtor.ConstrainBetapIp(eq,
-                                                    0.05, # Plasma poloidal beta
-                                                    3e3, # Plasma current [Amps]
-                                                    0.28 * 0.875) # Vacuum f=R*Bt
-            xpoints = [(0.3, -0.24), (0.3, 0.24)]  # (R,Z) locations of X-pointt
-            isoflux = [(0.3, -0.24, 0.3, 0.24)] # (R1,Z1, R2,Z2) pairs
+                                                    0.05,  # Plasma poloidal beta
+                                                    10e3,  # Plasma current [Amps]
+                                                    0.28 * 0.125)  # Vacuum f=R*Bt
+            xpoints = [(0.3, -0.24), (0.3, 0.24)]  # (R,Z) locations of X-point
+            isoflux = [(0.3, -0.24, 0.3, 0.24)]  # (R1,Z1, R2,Z2) pairs
             constrain = freegs.control.constrain(isoflux=isoflux, xpoints=xpoints)
             picard.solve(eq, profiles, constrain)
             # Call user-supplied evaluation function

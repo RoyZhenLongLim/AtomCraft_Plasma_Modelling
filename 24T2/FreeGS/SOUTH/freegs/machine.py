@@ -830,9 +830,12 @@ class Machine:
             coil.current = current
 
     def printCurrents(self):
+        netCurrent = 0
         print("==========================")
         for label, coil in self.coils:
             print(label + " : " + str(coil))
+            netCurrent += abs(coil.current)
+        print(f'Net Current is {netCurrent:.2f}')
         print("==========================")
 
     def takeMeasurements(self, eq=None):

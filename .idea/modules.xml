@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/AtomCraft_Plasma_Modelling.iml" filepath="$PROJECT_DIR$/.idea/AtomCraft_Plasma_Modelling.iml" />
+      <module fileurl="file://$USER_HOME$/AtomCraft/install_release/python/OpenFUSIONToolkit/TokaMaker/.idea/TokaMaker.iml" filepath="$USER_HOME$/AtomCraft/install_release/python/OpenFUSIONToolkit/TokaMaker/.idea/TokaMaker.iml" />
     </modules>
   </component>
 </project>

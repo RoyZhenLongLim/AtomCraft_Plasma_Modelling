@@ -7,11 +7,19 @@ inner_radius = 51e-3
 outer_radius = 60e-3
 solenoid_turns = 104
 
-RWall = [0.160, 0.1761, 0.2200, 0.280, 0.3400, 0.3839, 0.40, 0.3839, 0.3400, 0.280, 0.2200, 0.1761, 0.160]
-ZWall = [0.000, 0.0600, 0.1039, 0.120, 0.1039, 0.0600, 0.00, -0.0600, -0.1039, -0.120, -0.1039, -0.0600, 0.000]
+R0 = 0.3048     # Middle of the circle
+rwall = 0.16195 # Radius of the circular wall
+
+npoints = 50 # Number of points on the wall
+
+# Poloidal angles
+thetas = np.linspace(0, 2*np.pi, npoints, endpoint=False)
+Rwalls = R0 + rwall * np.cos(thetas)
+Zwalls = rwall * np.sin(thetas)
+
 walls = Wall(
-    RWall,
-    ZWall
+    Rwalls,
+    Zwalls
 )
 
 plasma_major_radius = 0.28

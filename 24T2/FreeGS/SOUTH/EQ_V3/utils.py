@@ -79,12 +79,12 @@ def generate_equilibrium(g):
           constraints,
           check_limited=True,
           limit_it=0,
-          show=True
           )
     return eq
 
 
 def printResult(eq):
+    eq.plot()
     print(
         'Plasma Properties:\n'
         f'\tPlasma Current       {eq.plasmaCurrent():8.2f}\n'
